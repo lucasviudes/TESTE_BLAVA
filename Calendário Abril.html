@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Calendário Abril 2026 — ModuKOT · Maximum</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#d4a940;--gold-l:#f0c865;--gold-d:#8a6520;
+  --brd-g:rgba(212,169,64,.4);--brd:rgba(50,70,120,.4);
+  --card:rgba(6,12,26,.85);--card2:rgba(8,16,34,.9);
+  --txt:#d8e8f8;--dim:#6a8aaa;--moon:#7fb0e0;
+  --so-bg:rgba(20,60,120,.80);--so-brd:#3a72a8;--so-accent:#5090d8;
+  --st-bg:rgba(18,75,45,.80);--st-brd:#3a8a5a;--st-accent:#40c878;
+  --ev-IN:#ffffff;--ev-GB:#ffd600;--ev-EE:#f48fb1;--ev-RC:#c8a0ff;
+  --ev-SK:#ff9d4d;--ev-TK:#4dd9ff;--ev-BS:#a0ffb0;--ev-BT:#ff6b6b;
+  --ev-FS:#ffe066;--ev-FG:#e0b060;--bos:#ff4d4d;
+}
+body{background:#05080f;background-image:url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80");background-size:cover;background-position:center top;background-attachment:fixed;color:var(--txt);font-family:'Crimson Text',Georgia,serif;min-height:100vh;padding:2rem 1rem 4rem;}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(180deg,rgba(2,5,14,.68) 0%,rgba(2,5,14,.78) 40%,rgba(2,5,14,.92) 100%);pointer-events:none;z-index:0;}
+header,div,p,span{position:relative;z-index:1;}
+header{text-align:center;margin-bottom:1.8rem;max-width:1000px;margin-left:auto;margin-right:auto;}
+.h-super{font-family:'Cinzel',serif;font-size:clamp(.85rem,2vw,1.1rem);color:#ffffff;letter-spacing:.12em;text-shadow:0 0 20px rgba(255,255,255,.3),0 1px 3px #000;margin-bottom:1.2rem;line-height:1.5;}
+.rune-bar{display:flex;align-items:center;gap:.5rem;margin:.6rem 0;}
+.rune-bar::before,.rune-bar::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--brd-g),transparent);}
+.rune-bar span{font-family:'Cinzel',serif;font-size:.65rem;color:var(--gold-d);letter-spacing:.3em;white-space:nowrap;}
+.h-month{font-family:'Cinzel',serif;font-size:clamp(1rem,2.5vw,1.4rem);color:#ffffff;letter-spacing:.3em;text-shadow:0 0 20px rgba(255,255,255,.3),0 1px 3px #000;}
+.logos-row{display:flex;justify-content:center;align-items:stretch;max-width:800px;margin:0 auto;border:1px solid var(--brd-g);border-radius:6px;background:rgba(4,8,22,.55);backdrop-filter:blur(12px);overflow:hidden;}
+.logo-col{flex:1;padding:1.2rem 2rem 1rem;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.logo-col:first-child{border-right:1px solid var(--brd-g);}
+.logo-sword{display:flex;align-items:center;gap:.3rem;margin-bottom:.2rem;}
+.sword-leaf{font-size:1rem;filter:drop-shadow(0 0 4px rgba(100,200,100,.6));}
+.sword-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-d),var(--gold),var(--gold-d));min-width:40px;}
+.crown-icon{font-size:1.6rem;display:block;margin-bottom:.1rem;filter:drop-shadow(0 0 8px rgba(212,169,64,.8));}
+.logo-name{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(1.5rem,4vw,2.4rem);background:linear-gradient(180deg,#f8e080 0%,#d4a940 50%,#8a6520 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:.06em;line-height:1;filter:drop-shadow(0 2px 4px rgba(0,0,0,.8));}
+.logo-slogan{font-style:italic;font-size:clamp(.7rem,1.4vw,.84rem);color:#ffffff;margin-top:.5rem;line-height:1.45;max-width:200px;text-shadow:0 1px 3px #000;}
+.wk-header{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;max-width:1000px;margin:0 auto 3px;text-align:center;}
+.wk-header span{font-family:'Cinzel',serif;font-size:.65rem;color:#ffffff;letter-spacing:.12em;padding:5px 0;border-bottom:1px solid var(--brd);text-transform:uppercase;text-shadow:0 1px 3px #000;}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;max-width:1000px;margin:0 auto;}
+.day{background:var(--card);border:1px solid var(--brd);border-radius:4px;min-height:90px;padding:5px 6px 6px;backdrop-filter:blur(6px);transition:border-color .2s;}
+.day:hover{border-color:var(--gold-d);}
+.day.empty{background:transparent;border-color:transparent;backdrop-filter:none;}
+.day-num{font-family:'Cinzel',serif;font-size:.72rem;color:#ffffff;margin-bottom:4px;display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;opacity:.5;}
+.day.has-ev .day-num{background:var(--gold-d);color:#fff;font-weight:700;opacity:1;}
+.day.wk .day-num{color:#7fb0e0;opacity:1;}
+.event{display:block;font-size:.68rem;line-height:1.25;border-radius:4px;padding:3px 6px;margin-bottom:3px;border-left:3px solid transparent;cursor:default;}
+.event:hover{filter:brightness(1.13);}
+.ev-SO{background:var(--so-bg);border-left-color:var(--so-accent);}
+.ev-ST{background:var(--st-bg);border-left-color:var(--st-accent);}
+.ev-name{font-weight:700;display:block;}
+.ev-reward{font-size:.6rem;display:block;margin-top:1px;opacity:.85;}
+.leg-IN .ev-name{color:var(--ev-IN);} .leg-IN .ev-reward{color:rgba(220,235,255,.55);}
+.leg-GB .ev-name{color:var(--ev-GB);} .leg-GB .ev-reward{color:#c8a000;}
+.leg-EE .ev-name{color:var(--ev-EE);} .leg-EE .ev-reward{color:#b05070;}
+.leg-RC .ev-name{color:var(--ev-RC);} .leg-RC .ev-reward{color:#9060cc;}
+.leg-SK .ev-name{color:var(--ev-SK);} .leg-SK .ev-reward{color:#cc6a20;}
+.leg-TK .ev-name{color:var(--ev-TK);} .leg-TK .ev-reward{color:#2090aa;}
+.leg-BS .ev-name{color:var(--ev-BS);} .leg-BS .ev-reward{color:#40aa60;}
+.leg-BT .ev-name{color:var(--ev-BT);} .leg-BT .ev-reward{color:#cc3030;}
+.leg-FS .ev-name{color:var(--ev-FS);} .leg-FS .ev-reward{color:#ccaa00;}
+.leg-FG .ev-name{color:var(--ev-FG);} .leg-FG .ev-reward{color:#aa7820;}
+.leg-BOS .ev-name{color:var(--bos);text-shadow:0 0 6px rgba(255,60,60,.4);} .leg-BOS .ev-reward{color:#cc2020;}
+.srv-badge{display:inline-block;font-family:'Cinzel',serif;font-size:.48rem;font-weight:700;letter-spacing:.07em;padding:1px 5px;border-radius:2px;margin-bottom:2px;}
+.srv-badge.SO{background:rgba(12,35,80,.9);color:#90c0f0;border:1px solid var(--so-brd);}
+.srv-badge.ST{background:rgba(10,50,30,.9);color:#80e8a0;border:1px solid var(--st-brd);}
+#g-tooltip{display:none;position:fixed;z-index:9999;background:rgba(3,8,22,.97);border:1px solid var(--brd-g);border-radius:8px;padding:.75rem 1rem;min-width:215px;max-width:310px;font-family:'Crimson Text',Georgia,serif;font-size:.82rem;line-height:1.6;color:var(--txt);box-shadow:0 6px 28px rgba(0,0,0,.85);pointer-events:none;white-space:normal;animation:tipIn .1s ease;}
+@keyframes tipIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+#g-tooltip strong{color:var(--gold-l);font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.06em;}
+.tip-srv{display:inline-block;font-family:'Cinzel',serif;font-size:.54rem;font-weight:700;letter-spacing:.08em;padding:1px 7px;border-radius:3px;margin:.3rem 0 .1rem;}
+.tip-SO{background:rgba(12,35,80,.9);color:#90c0f0;border:1px solid var(--so-brd);}
+.tip-ST{background:rgba(10,50,30,.9);color:#80e8a0;border:1px solid var(--st-brd);}
+.tip-leg{font-size:.75rem;margin-bottom:.2rem;}
+.tip-IN{color:var(--ev-IN);}.tip-GB{color:var(--ev-GB);}.tip-EE{color:var(--ev-EE);}
+.tip-RC{color:var(--ev-RC);}.tip-SK{color:var(--ev-SK);}.tip-TK{color:var(--ev-TK);}
+.tip-BS{color:var(--ev-BS);}.tip-BT{color:var(--ev-BT);}.tip-FS{color:var(--ev-FS);}
+.tip-FG{color:var(--ev-FG);}.tip-BOS{color:var(--bos);}
+.tip-row{display:flex;gap:.4rem;margin-top:.22rem;align-items:flex-start;}
+.tip-sep{border:none;border-top:1px solid rgba(50,80,140,.4);margin:.4rem 0;}
+.panel{max-width:1000px;margin:.9rem auto 0;border:1px solid var(--brd);background:var(--card2);border-radius:8px;overflow:hidden;backdrop-filter:blur(8px);}
+.panel-header{font-family:'Cinzel',serif;font-size:.78rem;color:#ffffff;letter-spacing:.25em;text-transform:uppercase;padding:.75rem 1.4rem;border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:.6rem;}
+.panel-header .ph-icon{font-size:1rem;}
+.panel-body{padding:1rem 1.4rem 1.2rem;}
+.leg-cat{margin-bottom:1rem;}
+.leg-cat:last-child{margin-bottom:0;}
+.leg-cat-title{font-family:'Cinzel',serif;font-size:.62rem;color:#ffffff;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.6rem;display:flex;align-items:center;gap:.45rem;}
+.leg-cat-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.15),transparent);}
+.leg-sub{margin-bottom:.7rem;padding-left:.9rem;border-left:2px solid rgba(255,255,255,.08);}
+.leg-sub:last-child{margin-bottom:0;}
+.leg-sub-title{font-family:'Cinzel',serif;font-size:.54rem;color:rgba(255,255,255,.55);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.4rem;}
+.leg-grid{display:flex;flex-wrap:wrap;gap:.4rem .9rem;}
+.leg-chip{display:flex;align-items:center;gap:.38rem;font-size:.82rem;color:#ffffff;}
+.lc{font-family:'Cinzel',serif;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:3px;white-space:nowrap;display:flex;align-items:center;gap:.3rem;}
+.lc-SO{background:var(--so-bg);color:#90c0f0;border:1px solid var(--so-brd);}
+.lc-ST{background:var(--st-bg);color:#80e8a0;border:1px solid var(--st-brd);}
+.lc-IN{background:rgba(20,25,50,.9);color:var(--ev-IN);border:1px solid rgba(255,255,255,.2);}
+.lc-GB{background:rgba(40,30,5,.9);color:var(--ev-GB);border:1px solid rgba(255,214,0,.3);}
+.lc-EE{background:rgba(50,15,28,.9);color:var(--ev-EE);border:1px solid rgba(244,143,177,.3);}
+.lc-RC{background:rgba(35,15,55,.9);color:var(--ev-RC);border:1px solid rgba(200,160,255,.25);}
+.lc-SK{background:rgba(50,25,5,.9);color:var(--ev-SK);border:1px solid rgba(255,157,77,.3);}
+.lc-TK{background:rgba(5,35,50,.9);color:var(--ev-TK);border:1px solid rgba(77,217,255,.25);}
+.lc-BS{background:rgba(5,40,20,.9);color:var(--ev-BS);border:1px solid rgba(160,255,176,.25);}
+.lc-BT{background:rgba(50,5,5,.9);color:var(--ev-BT);border:1px solid rgba(255,107,107,.3);}
+.lc-FS{background:rgba(40,35,0,.9);color:var(--ev-FS);border:1px solid rgba(255,224,102,.25);}
+.lc-FG{background:rgba(40,25,0,.9);color:var(--ev-FG);border:1px solid rgba(224,176,96,.3);}
+.lc-BOS{background:rgba(60,5,5,.95);color:var(--bos);border:1px solid rgba(255,77,77,.4);}
+.res-servers{display:flex;flex-direction:column;gap:.85rem;}
+.res-srv-card{border:1px solid rgba(255,255,255,.08);border-radius:6px;overflow:hidden;}
+.res-srv-header{display:flex;align-items:center;justify-content:space-between;padding:.55rem .9rem;gap:.6rem;}
+.res-srv-header.SO{background:rgba(20,60,120,.6);border-bottom:1px solid var(--so-brd);}
+.res-srv-header.ST{background:rgba(18,75,45,.6);border-bottom:1px solid var(--st-brd);}
+.res-srv-name{font-family:'Cinzel',serif;font-size:.72rem;font-weight:700;color:#ffffff;letter-spacing:.12em;display:flex;align-items:center;gap:.4rem;}
+.res-srv-total{font-family:'Cinzel',serif;font-size:.68rem;color:#ffffff;opacity:.7;white-space:nowrap;}
+.res-srv-total strong{font-size:.9rem;color:#ffffff;opacity:1;margin-right:.15rem;}
+.res-srv-body{padding:.6rem .9rem .7rem;display:flex;flex-direction:column;gap:.6rem;}
+.res-cc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:5px;padding:.5rem .7rem;}
+.res-cc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.45rem;}
+.res-cc-name{font-family:'Cinzel',serif;font-size:.6rem;color:rgba(255,255,255,.75);letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:.3rem;}
+.res-cc-total{font-family:'Cinzel',serif;font-size:.62rem;color:rgba(255,255,255,.5);}
+.res-cc-total strong{color:#ffffff;opacity:.9;}
+.res-tipos{display:flex;flex-wrap:wrap;gap:.3rem .55rem;}
+.res-pill{display:flex;align-items:center;gap:.28rem;font-family:'Cinzel',serif;font-size:.62rem;padding:2px 8px 2px 5px;border-radius:20px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#ffffff;white-space:nowrap;}
+.res-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.res-count{font-weight:700;font-size:.7rem;color:#fff;margin-left:3px;}
+.res-boss-strip{margin-top:.5rem;padding-top:.5rem;border-top:1px solid rgba(255,77,77,.2);}
+.res-boss-label{font-family:'Cinzel',serif;font-size:.52rem;color:rgba(255,100,100,.7);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.3rem;}
+.dot-SO{background:#5090d8;}.dot-ST{background:#40c878;}
+.dot-IN{background:#ffffff;}.dot-GB{background:#ffd600;}.dot-EE{background:#f48fb1;}
+.dot-RC{background:#c8a0ff;}.dot-SK{background:#ff9d4d;}.dot-TK{background:#4dd9ff;}
+.dot-BS{background:#a0ffb0;}.dot-BT{background:#ff6b6b;}.dot-FS{background:#ffe066;}
+.dot-FG{background:#e0b060;}.dot-BOS{background:#ff4d4d;}
+.footer-note{text-align:center;margin-top:.8rem;font-style:italic;font-size:.75rem;color:#ffffff;opacity:.5;}
+@media(max-width:640px){.logos-row{flex-direction:column;}.logo-col:first-child{border-right:none;border-bottom:1px solid var(--brd-g);}.day{min-height:70px;padding:4px;}.event{font-size:.6rem;}.day-num{font-size:.62rem;width:18px;height:18px;line-height:18px;}.res-servers{gap:.6rem;}}
+</style>
+</head>
+<body>
+<div id="g-tooltip"></div>
+<header>
+  <p class="h-super">Calendário de Eventos da Comunidade<br>Maximum no OT do ModuKOT</p>
+  <div class="logos-row">
+    <div class="logo-col">
+      <div class="logo-sword"><span class="sword-leaf">🍃</span><div class="sword-line"></div></div>
+      <div class="logo-name">ModuKOT</div>
+      <div class="logo-slogan">Uma nova experiência sem perder a essência.</div>
+    </div>
+    <div class="logo-col">
+      <span class="crown-icon">👑</span>
+      <div class="logo-name">Maximum</div>
+      <div class="logo-slogan">Não importa onde você jogue,<br>você nunca estará sozinho.</div>
+    </div>
+  </div>
+  <div class="rune-bar"><span class="h-month">ABRIL 2026</span></div>
+</header>
+<div class="wk-header"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div>
+<div class="cal-grid">
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day has-ev"><span class="day-num">1</span>
+<span class="event ev-SO leg-BOS" data-nome="Gaz'haragoth" data-srv="SO" data-leg="BOS" data-cc="Modukot" data-reward="" data-obs="" data-fim="01/04/2026"><span class="ev-name">Gaz'haragoth</span></span>
+</div>
+<div class="day has-ev"><span class="day-num">2</span>
+<span class="event ev-SO leg-RC" data-nome="Recrutamento" data-srv="SO" data-leg="RC" data-cc="Maximum" data-reward="250 reais ou 3k TC" data-obs="Perfeito para quem é um bom comunicador" data-fim="30/04/2026"><span class="ev-name">Recrutamento</span><span class="ev-reward">🏆 250 reais ou 3k TC</span></span>
+</div>
+<div class="day has-ev"><span class="day-num">3</span>
+<span class="event ev-SO leg-TK" data-nome="Task Time" data-srv="SO" data-leg="TK" data-cc="Modukot" data-reward="" data-obs="" data-fim="05/04/2026"><span class="ev-name">Task Time</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">4</span>
+<span class="event ev-ST leg-IN" data-nome="Inauguração" data-srv="ST" data-leg="IN" data-cc="Modukot" data-reward="Bonus para Servidor Oficial" data-obs="" data-fim="31/07/2026"><span class="ev-name">Inauguração</span><span class="ev-reward">🏆 Bonus para Servidor Oficial</span></span>
+<span class="event ev-ST leg-SK" data-nome="Max Skills Top" data-srv="ST" data-leg="SK" data-cc="Maximum" data-reward="1 k de Tc para Cada Skill" data-obs="Todos deverão ter lvl 2500+ para receber premiação" data-fim="30/07/2026"><span class="ev-name">Max Skills Top</span><span class="ev-reward">🏆 1 k de Tc para Cada Skill</span></span>
+<span class="event ev-SO leg-TK" data-nome="Task Time" data-srv="SO" data-leg="TK" data-cc="Modukot" data-reward="" data-obs="" data-fim="05/04/2026"><span class="ev-name">Task Time</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">5</span>
+<span class="event ev-SO leg-TK" data-nome="Task Time" data-srv="SO" data-leg="TK" data-cc="Modukot" data-reward="" data-obs="" data-fim="05/04/2026"><span class="ev-name">Task Time</span></span>
+</div>
+<div class="day has-ev"><span class="day-num">6</span>
+<span class="event ev-SO leg-GB" data-nome="Gincana do Blava" data-srv="SO" data-leg="GB" data-cc="Maximum" data-reward="Tibia Coin" data-obs="Pontuação será feita Individualmente" data-fim="30/04/2026"><span class="ev-name">Gincana do Blava</span><span class="ev-reward">🏆 Tibia Coin</span></span>
+<span class="event ev-ST leg-GB" data-nome="Gincana do Blava" data-srv="ST" data-leg="GB" data-cc="Maximum" data-reward="Passe para fazer a Gincana de Maio" data-obs="Hazard 12 para proxima fase" data-fim="30/04/2026"><span class="ev-name">Gincana do Blava</span><span class="ev-reward">🏆 Passe para fazer a Gincana de Maio</span></span>
+</div>
+<div class="day"><span class="day-num">7</span>
+</div>
+<div class="day has-ev"><span class="day-num">8</span>
+<span class="event ev-SO leg-BOS" data-nome="Ghazbaran" data-srv="SO" data-leg="BOS" data-cc="Modukot" data-reward="" data-obs="" data-fim="08/04/2026"><span class="ev-name">Ghazbaran</span></span>
+</div>
+<div class="day"><span class="day-num">9</span>
+</div>
+<div class="day has-ev"><span class="day-num">10</span>
+<span class="event ev-SO leg-BS" data-nome="Bestiário" data-srv="SO" data-leg="BS" data-cc="Modukot" data-reward="" data-obs="" data-fim="12/04/2026"><span class="ev-name">Bestiário</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">11</span>
+<span class="event ev-SO leg-BS" data-nome="Bestiário" data-srv="SO" data-leg="BS" data-cc="Modukot" data-reward="" data-obs="" data-fim="12/04/2026"><span class="ev-name">Bestiário</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">12</span>
+<span class="event ev-SO leg-BS" data-nome="Bestiário" data-srv="SO" data-leg="BS" data-cc="Modukot" data-reward="" data-obs="" data-fim="12/04/2026"><span class="ev-name">Bestiário</span></span>
+</div>
+<div class="day"><span class="day-num">13</span>
+</div>
+<div class="day"><span class="day-num">14</span>
+</div>
+<div class="day has-ev"><span class="day-num">15</span>
+<span class="event ev-SO leg-BOS" data-nome="Gaz'haragoth" data-srv="SO" data-leg="BOS" data-cc="Modukot" data-reward="" data-obs="" data-fim="15/04/2026"><span class="ev-name">Gaz'haragoth</span></span>
+</div>
+<div class="day"><span class="day-num">16</span>
+</div>
+<div class="day has-ev"><span class="day-num">17</span>
+<span class="event ev-SO leg-BT" data-nome="Boss Time" data-srv="SO" data-leg="BT" data-cc="Modukot" data-reward="" data-obs="" data-fim="19/04/2026"><span class="ev-name">Boss Time</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">18</span>
+<span class="event ev-SO leg-BT" data-nome="Boss Time" data-srv="SO" data-leg="BT" data-cc="Modukot" data-reward="" data-obs="" data-fim="19/04/2026"><span class="ev-name">Boss Time</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">19</span>
+<span class="event ev-SO leg-BT" data-nome="Boss Time" data-srv="SO" data-leg="BT" data-cc="Modukot" data-reward="" data-obs="" data-fim="19/04/2026"><span class="ev-name">Boss Time</span></span>
+</div>
+<div class="day"><span class="day-num">20</span>
+</div>
+<div class="day"><span class="day-num">21</span>
+</div>
+<div class="day has-ev"><span class="day-num">22</span>
+<span class="event ev-SO leg-BOS" data-nome="Morgaroth" data-srv="SO" data-leg="BOS" data-cc="Modukot" data-reward="" data-obs="" data-fim="22/04/2026"><span class="ev-name">Morgaroth</span></span>
+</div>
+<div class="day"><span class="day-num">23</span>
+</div>
+<div class="day has-ev"><span class="day-num">24</span>
+<span class="event ev-SO leg-FS" data-nome="Fast Skills" data-srv="SO" data-leg="FS" data-cc="Modukot" data-reward="" data-obs="" data-fim="26/04/2026"><span class="ev-name">Fast Skills</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">25</span>
+<span class="event ev-SO leg-FS" data-nome="Fast Skills" data-srv="SO" data-leg="FS" data-cc="Modukot" data-reward="" data-obs="" data-fim="26/04/2026"><span class="ev-name">Fast Skills</span></span>
+</div>
+<div class="day wk has-ev"><span class="day-num">26</span>
+<span class="event ev-SO leg-FS" data-nome="Fast Skills" data-srv="SO" data-leg="FS" data-cc="Modukot" data-reward="" data-obs="" data-fim="26/04/2026"><span class="ev-name">Fast Skills</span></span>
+</div>
+<div class="day"><span class="day-num">27</span>
+</div>
+<div class="day"><span class="day-num">28</span>
+</div>
+<div class="day has-ev"><span class="day-num">29</span>
+<span class="event ev-SO leg-BOS" data-nome="Morshabaal" data-srv="SO" data-leg="BOS" data-cc="Modukot" data-reward="" data-obs="" data-fim="29/04/2026"><span class="ev-name">Morshabaal</span></span>
+</div>
+<div class="day"><span class="day-num">30</span>
+</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+
+</div>
+<div class="panel" style="margin:.9rem auto 0">
+<div class="panel-header"><span class="ph-icon">⚜</span> Legenda</div><div class="panel-body"><div class="leg-cat">
+    <div class="leg-cat-title">🖥️ Servidor</div>
+    <div class="leg-grid">
+      <div class="leg-chip"><span class="lc lc-SO">🔵 SO</span></div>
+      <div class="leg-chip"><span class="lc lc-ST">🟢 ST</span></div>
+    </div>
+  </div></div>
+</div>
+<div class="panel" style="margin:.6rem auto 0">
+<div class="panel-header"><span class="ph-icon">📊</span> Resumo de Eventos — Abril 2026 <span style="margin-left:.5rem;opacity:.6;font-size:.7rem">(22 total)</span></div><div class="panel-body"><div class="res-servers"><div class="res-srv-card"><div class="res-srv-header SO">
+      <span class="res-srv-name">🔵 Servidor Oficial</span>
+      <span class="res-srv-total"><strong>19</strong> eventos</span>
+    </div><div class="res-srv-body"><div class="res-cc"><div class="res-cc-header">
+        <span class="res-cc-name">🏢 Maximum</span>
+        <span class="res-cc-total"><strong>2</strong> eventos</span>
+      </div><div class="res-tipos"><div class="res-pill"><span class="res-dot dot-GB"></span>🟡 Gincana do Blava<span class="res-count">1</span></div><div class="res-pill"><span class="res-dot dot-RC"></span>🟣 Recrutamento<span class="res-count">1</span></div></div></div><div class="res-cc"><div class="res-cc-header">
+        <span class="res-cc-name">🏢 Modukot</span>
+        <span class="res-cc-total"><strong>17</strong> eventos</span>
+      </div><div class="res-tipos"><div class="res-pill"><span class="res-dot dot-TK"></span>🔵 Task Time<span class="res-count">3</span></div><div class="res-pill"><span class="res-dot dot-BS"></span>🟢 Bestiário<span class="res-count">3</span></div><div class="res-pill"><span class="res-dot dot-BT"></span>🔴 Boss Time<span class="res-count">3</span></div><div class="res-pill"><span class="res-dot dot-FS"></span>🟡 Fast Skills<span class="res-count">3</span></div></div><div class="res-boss-strip">
+          <div class="res-boss-label">💀 Bosses Invasores</div>
+          <div class="res-tipos">
+            <div class="res-pill"><span class="res-dot dot-BOS"></span>💀 Boss Invasor<span class="res-count">5</span></div>
+          </div>
+        </div></div></div></div><div class="res-srv-card"><div class="res-srv-header ST">
+      <span class="res-srv-name">🟢 Servidor Temporário</span>
+      <span class="res-srv-total"><strong>3</strong> eventos</span>
+    </div><div class="res-srv-body"><div class="res-cc"><div class="res-cc-header">
+        <span class="res-cc-name">🏢 Maximum</span>
+        <span class="res-cc-total"><strong>2</strong> eventos</span>
+      </div><div class="res-tipos"><div class="res-pill"><span class="res-dot dot-GB"></span>🟡 Gincana do Blava<span class="res-count">1</span></div><div class="res-pill"><span class="res-dot dot-SK"></span>🟠 Skills Top<span class="res-count">1</span></div></div></div><div class="res-cc"><div class="res-cc-header">
+        <span class="res-cc-name">🏢 Modukot</span>
+        <span class="res-cc-total"><strong>1</strong> evento</span>
+      </div><div class="res-tipos"><div class="res-pill"><span class="res-dot dot-IN"></span>⚪ Inauguração<span class="res-count">1</span></div></div></div></div></div></div></div>
+</div>
+<p class="footer-note">Calendário de uso exclusivo da comunidade Maximum · Servidor ModuKOT · Autoria Blavatsk Shadow</p>
+<div id="g-tooltip"></div>
+<script>
+const _t=document.getElementById('g-tooltip');
+const SL={SO:'Servidor Oficial',ST:'Servidor Temporário'};
+const LL={IN:'Inauguração',GB:'Gincana do Blava',EE:'Evento Exclusivo',RC:'Recrutamento',SK:'Skills Top',TK:'Task Time',BS:'Bestiário',BT:'Boss Time',FS:'Fast Skills',FG:'Forge Time',BOS:'Boss Invasor'};
+function _show(e){
+  const d=e.currentTarget.dataset;
+  let h=`<strong>${d.nome}</strong><br>`;
+  h+=`<span class="tip-srv tip-${d.srv}">🖥️ ${SL[d.srv]||d.srv}</span>`;
+  if(d.cc&&d.cc!=='—')h+=` <span style="font-family:'Cinzel',serif;font-size:.52rem;opacity:.7;color:#fff">· 🏢 ${d.cc}</span>`;
+  h+=`<br><span class="tip-leg tip-${d.leg}">🏷️ ${LL[d.leg]||d.leg}</span>`;
+  h+=`<hr class="tip-sep">`;
+  if(d.reward)h+=`<div class="tip-row"><span>🏆</span><em>${d.reward}</em></div>`;
+  h+=`<div class="tip-row"><span>📅</span><span>Término: ${d.fim}</span></div>`;
+  if(d.obs)h+=`<div class="tip-row"><span>📋</span><span>${d.obs}</span></div>`;
+  _t.innerHTML=h;_t.style.display='block';_pos(e);
+}
+function _pos(e){const p=14,tw=_t.offsetWidth||260,th=_t.offsetHeight||130;let x=e.clientX+p,y=e.clientY+p;if(x+tw>window.innerWidth-8)x=e.clientX-tw-p;if(y+th>window.innerHeight-8)y=e.clientY-th-p;if(y<8)y=8;_t.style.left=x+'px';_t.style.top=y+'px';}
+document.querySelectorAll('.event').forEach(el=>{el.addEventListener('mouseenter',_show);el.addEventListener('mousemove',_pos);el.addEventListener('mouseleave',()=>_t.style.display='none');});
+</script>
+</body>
+</html>
